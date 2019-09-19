@@ -216,6 +216,20 @@ Track as many error messages as possible that you made during this week (stop on
 # -> Error in "4" - "3" : non-numeric argument to binary operator
 
 # Your examples below
+
+2Pac
+# -> Error: unexpected symbol in "2Pac"
+
+<-
+# -> Error: unexpected assignment in "<-"
+
+mean()
+# -> Error in mean.default() : argument "x" is missing, with no default
+
+library(ggplot)
+
+# -> Error in library(ggplot) : there is no package called ‘ggplot’ (I have tried loading ggplot instead of ggplot2 - I figured there has to be an earlier version than 2...)
+
 ```
 
 Post one of these 4 errors on discourse.
