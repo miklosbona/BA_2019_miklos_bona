@@ -74,15 +74,15 @@ FALSE     # -> FALSE
 There are built-in objects and objects you import or create. Most importantly, you assign values to objects you create with the '<-' operator: a '<' ('less than') followed by a '-' ('minus' or 'dash').
 
 ```{r, assignment, eval=FALSE}
-marcs_new_object <- ...
-marcs_new_object
+mikis_new_object <- 'I am a fancy object'
+mikis_new_object
 ```
 
 One important function to create objects is the $c()$ function, which combines several items into one objects:
 
 ```{r, eval=FALSE}
-marcs_new_combined_object <- c(...)
-marcs_new_combined_object
+mikis_new_combined_object <- c(mikis_new_object, 'having a great time')
+mikis_new_combined_object
 ```
 
 In principle, you can use '=' to assign values, but this is very non-idiomatic R. I will subtract points for using '='. Use '<-'.
@@ -123,6 +123,7 @@ mean
 When we *call* it, we put parentheses at the end, and we tell it what to perform its action on:
 
 ```{r mean_means}
+mean(2,3)
 ```
 
 **Exercise:** What happens if you call the function $mean$ without any arguments, i.e. $mean()$?
@@ -141,6 +142,7 @@ ggplot
 You will get an error. We first need to import the library:
 
 ```{r}
+library(ggplot2)
 ```
 
 This tells R to go and get all the objects defined in the library called ggplot2, which includes *ggplot*. This gives us our first data (non-)visualization: a beautifully empty plot. 
@@ -158,6 +160,7 @@ x <- c(1, 3.0, 2.9)
 For built-in functions, you can also ask for help or bring up the documentation with 'help()' or '?' or '??':
 
 ```{r, what_is_summary}
+help(mean)
 ```
 
 **Exercise:** What do 'class()' and 'str()' do? Use 'help' (or '?'). Don't spend too much time reading the docs. Which description do you find more helpful?
@@ -170,6 +173,8 @@ For built-in functions, you can also ask for help or bring up the documentation 
 ### Make Your First Figure
 
 ```{r, gapminder}
+library(gapminder)
+gapminder
 ```
 
 As you can see, some datasets are conveniently bundled for you as libraries.
