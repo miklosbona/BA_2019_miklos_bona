@@ -228,7 +228,9 @@ mean()
 
 library(ggplot)
 
-# -> Error in library(ggplot) : there is no package called ‘ggplot’ (I have tried loading ggplot instead of ggplot2 - I figured there has to be an earlier version than 2...)
+# -> Error in library(ggplot) : there is no package called ‘ggplot’ 
+
+# Reason: a basic error, as I have tried loading ggplot instead of ggplot2. I realized that 'ggplot' doesn't exist as a separate package; according to the log history of the package there was no 'ggplot' before 'ggplot2' was released in 2007. 
 
 ```
 
@@ -241,7 +243,13 @@ Try fo figure out two of the following and post your answers on Discourse for ot
 
 - Identify elements from my *eureka_or_bust* example in the slides and see whether you can figure out what the different elements mean to R.
 - What does *eval=FALSE* mean in part 4? Figure this out by replacing it by *eval=TRUE* and seeing what you get.
+
+Answer: If ‘eval’ is set to FALSE for a particular chunk, when knitting the chunk it will only show the code without evaluating it.
+
 - What is the Tidyverse?
+
+Answer: Tidyverse is a collection of R packages designed for data science. It includes basic packages (e.g. ggplot2, dplyr, tidyr or readr) as well as specialised packages for importing, wrangling, programming and modelling data, which all need to be imported separately.
+
 - Who is Hadley Wickham?
 
 ## Resources for this lecture 
